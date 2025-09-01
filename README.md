@@ -138,7 +138,7 @@ risk.concentration.max=0.4       # Max symbol concentration
 - `trade-created` - New trades published here
 - `limit-breached` - Risk limit breaches published here
 
-## 🏛️ Data Models
+## Data Models
 
 ### Trade
 - `id`, `trader`, `symbol`, `quantity`, `price`
