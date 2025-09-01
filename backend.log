@@ -6708,3 +6708,214 @@ CRITICAL ALERT: PNL_STOP_LOSS for trader alice
 2025-08-31T21:03:47.392-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for MS
 2025-08-31T21:03:47.392-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AMD
 CRITICAL ALERT: PNL_STOP_LOSS for trader charlie
+2025-08-31T21:04:16.258-04:00  WARN 42307 --- [sentinel] [MessageBroker-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GS
+2025-08-31T21:04:16.271-04:00  INFO 42307 --- [sentinel] [MessageBroker-1] s.c.e.s.service.LiveTradingService       : Executed live trade: charlie BUY 797 shares of GS at $745.25
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GS
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for JNJ
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for DIS
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for FDX
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for KO
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for VLO
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for COP
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for VTI
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for TSLA
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ABT
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for BABA
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for WMT
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for MRK
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for NKE
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for BTC
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for XOM
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for SLV
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AXP
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GLD
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for MPC
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ORCL
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AMZN
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ASML
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GE
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GS
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for UNI
+2025-08-31T21:04:16.294-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for LTC
+2025-08-31T21:04:16.295-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for CRM
+2025-08-31T21:04:16.295-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for PYPL
+2025-08-31T21:04:16.295-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GOOGL
+2025-08-31T21:04:16.295-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for MS
+2025-08-31T21:04:16.295-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AMD
+CRITICAL ALERT: PNL_STOP_LOSS for trader charlie
+2025-08-31T21:04:46.413-04:00  INFO 42307 --- [sentinel] [MessageBroker-5] s.c.e.s.service.MarketDataService        : Fetched live price for CVX: $160.6 (0.8034%)
+2025-08-31T21:04:46.422-04:00  INFO 42307 --- [sentinel] [MessageBroker-5] s.c.e.s.service.LiveTradingService       : Executed live trade: alice BUY 375 shares of CVX at $160.6
+2025-08-31T21:04:46.493-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CVX: $160.6 (0.8034%)
+2025-08-31T21:04:46.546-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AXP: $331.28 (1.312%)
+2025-08-31T21:04:46.626-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AAPL: $232.14 (-0.1806%)
+2025-08-31T21:04:46.682-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for EOG: $124.82 (0.386%)
+2025-08-31T21:04:46.748-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for UNG: $12.83 (2.0684%)
+2025-08-31T21:04:46.955-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for UNI: $0.0 (0.0%)
+2025-08-31T21:04:47.055-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CRM: $256.25 (0.6758%)
+2025-08-31T21:04:47.132-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for LTC: $36.5 (0.0823%)
+2025-08-31T21:04:47.188-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for TSM: $230.87 (-3.1057%)
+2025-08-31T21:04:47.247-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for MMM: $155.53 (-1.2884%)
+2025-08-31T21:04:47.309-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CAT: $419.04 (-3.649%)
+2025-08-31T21:04:47.364-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GS: $745.25 (-0.7947%)
+2025-08-31T21:04:47.419-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for LINK: $9.22 (9.6314%)
+2025-08-31T21:04:47.479-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for META: $738.7 (-1.6522%)
+2025-08-31T21:04:47.562-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for ORCL: $226.13 (-5.9046%)
+2025-08-31T21:04:47.614-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for USO: $74.84 (-0.5316%)
+2025-08-31T21:04:47.672-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for FDX: $231.07 (-0.0865%)
+2025-08-31T21:04:47.724-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for ADBE: $356.7 (0.7741%)
+2025-08-31T21:04:47.786-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for VTI: $318.2 (-0.5936%)
+2025-08-31T21:04:47.838-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for ABT: $132.66 (0.982%)
+2025-08-31T21:04:47.896-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for WMT: $96.98 (0.9052%)
+2025-08-31T21:04:47.955-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GOOGL: $212.91 (0.6001%)
+2025-08-31T21:04:48.040-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for PYPL: $70.19 (0.1856%)
+2025-08-31T21:04:48.108-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CVX: $160.6 (0.8034%)
+2025-08-31T21:04:48.161-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for QQQ: $570.4 (-1.1576%)
+2025-08-31T21:04:48.228-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for XOM: $114.29 (0.8293%)
+2025-08-31T21:04:48.296-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for SLV: $36.19 (1.8863%)
+2025-08-31T21:04:48.391-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GOLD: $0.0 (0.0%)
+2025-08-31T21:04:48.447-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AMZN: $229.0 (-1.1226%)
+2025-08-31T21:04:48.506-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for NKE: $77.37 (-0.7059%)
+2025-08-31T21:04:48.584-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for KO: $68.99 (0.9216%)
+CRITICAL ALERT: PNL_STOP_LOSS for trader alice
+2025-08-31T21:05:16.523-04:00  INFO 42307 --- [sentinel] [MessageBroker-2] s.c.e.s.service.MarketDataService        : Fetched live price for SLB: $36.84 (0.9868%)
+2025-08-31T21:05:16.539-04:00  INFO 42307 --- [sentinel] [MessageBroker-2] s.c.e.s.service.LiveTradingService       : Executed live trade: alice BUY 815 shares of SLB at $36.84
+2025-08-31T21:05:16.627-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for SLB: $36.84 (0.9868%)
+2025-08-31T21:05:16.722-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AXP: $331.28 (1.312%)
+2025-08-31T21:05:16.789-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AAPL: $232.14 (-0.1806%)
+2025-08-31T21:05:16.843-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for EOG: $124.82 (0.386%)
+2025-08-31T21:05:16.944-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for UNG: $12.83 (2.0684%)
+2025-08-31T21:05:17.020-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for UNI: $0.0 (0.0%)
+2025-08-31T21:05:17.087-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CRM: $256.25 (0.6758%)
+2025-08-31T21:05:17.151-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for LTC: $36.5 (0.0823%)
+2025-08-31T21:05:17.256-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for TSM: $230.87 (-3.1057%)
+2025-08-31T21:05:17.327-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for MMM: $155.53 (-1.2884%)
+2025-08-31T21:05:17.393-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CAT: $419.04 (-3.649%)
+2025-08-31T21:05:17.465-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GS: $745.25 (-0.7947%)
+2025-08-31T21:05:17.551-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for LINK: $9.22 (9.6314%)
+2025-08-31T21:05:17.627-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for META: $738.7 (-1.6522%)
+2025-08-31T21:05:17.707-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for ORCL: $226.13 (-5.9046%)
+2025-08-31T21:05:17.799-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for USO: $74.84 (-0.5316%)
+2025-08-31T21:05:17.865-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for FDX: $231.07 (-0.0865%)
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ADBE
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for VTI
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ABT
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for WMT
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GOOGL
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for PYPL
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for CVX
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for QQQ
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for XOM
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for SLV
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GOLD
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AMZN
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for NKE
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for KO
+2025-08-31T21:05:17.866-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for SLB
+CRITICAL ALERT: PNL_STOP_LOSS for trader alice
+2025-08-31T21:05:46.260-04:00  WARN 42307 --- [sentinel] [MessageBroker-7] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for JNJ
+2025-08-31T21:05:46.280-04:00  INFO 42307 --- [sentinel] [MessageBroker-7] s.c.e.s.service.LiveTradingService       : Executed live trade: alice SELL 890 shares of JNJ at $177.17
+2025-08-31T21:05:46.311-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for JNJ
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AXP
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AAPL
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for EOG
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for UNG
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for UNI
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for CRM
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for LTC
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for TSM
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for MMM
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for CAT
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GS
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for LINK
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for JNJ
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for META
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ORCL
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for USO
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for FDX
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ADBE
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for VTI
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ABT
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for WMT
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GOOGL
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for PYPL
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for CVX
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for QQQ
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for XOM
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for SLV
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GOLD
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AMZN
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for NKE
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for KO
+2025-08-31T21:05:46.312-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for SLB
+CRITICAL ALERT: PNL_STOP_LOSS for trader alice
+2025-08-31T21:06:16.414-04:00  INFO 42307 --- [sentinel] [MessageBroker-2] s.c.e.s.service.MarketDataService        : Fetched live price for GE: $275.2 (-0.2899%)
+2025-08-31T21:06:16.430-04:00  INFO 42307 --- [sentinel] [MessageBroker-2] s.c.e.s.service.LiveTradingService       : Executed live trade: charlie SELL 962 shares of GE at $275.2
+2025-08-31T21:06:16.509-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GE: $275.2 (-0.2899%)
+2025-08-31T21:06:16.562-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for JNJ: $177.17 (0.9803%)
+2025-08-31T21:06:16.621-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for DIS: $118.38 (0.629%)
+2025-08-31T21:06:16.676-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for FDX: $231.07 (-0.0865%)
+2025-08-31T21:06:16.728-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for KO: $68.99 (0.9216%)
+2025-08-31T21:06:16.782-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for VLO: $152.01 (0.5623%)
+2025-08-31T21:06:16.838-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for COP: $98.97 (0.5282%)
+2025-08-31T21:06:16.906-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for VTI: $318.2 (-0.5936%)
+2025-08-31T21:06:16.957-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for TSLA: $333.87 (-3.5002%)
+2025-08-31T21:06:17.016-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for ABT: $132.66 (0.982%)
+2025-08-31T21:06:17.073-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for BABA: $135.0 (12.9046%)
+2025-08-31T21:06:17.129-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for WMT: $96.98 (0.9052%)
+2025-08-31T21:06:17.186-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for MRK: $84.12 (1.0936%)
+2025-08-31T21:06:17.232-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for NKE: $77.37 (-0.7059%)
+2025-08-31T21:06:17.293-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for BTC: $47.93 (-3.328%)
+2025-08-31T21:06:17.357-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for XOM: $114.29 (0.8293%)
+2025-08-31T21:06:17.417-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for SLV: $36.19 (1.8863%)
+2025-08-31T21:06:17.468-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AXP: $331.28 (1.312%)
+2025-08-31T21:06:17.532-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GLD: $318.07 (0.965%)
+2025-08-31T21:06:17.592-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for MPC: $179.71 (0.2287%)
+2025-08-31T21:06:17.663-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for ORCL: $226.13 (-5.9046%)
+2025-08-31T21:06:17.730-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AMZN: $229.0 (-1.1226%)
+2025-08-31T21:06:17.786-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for ASML: $742.62 (-2.7297%)
+2025-08-31T21:06:17.846-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GE: $275.2 (-0.2899%)
+2025-08-31T21:06:17.922-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GS: $745.25 (-0.7947%)
+2025-08-31T21:06:17.983-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for UNI: $0.0 (0.0%)
+2025-08-31T21:06:18.050-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for LTC: $36.5 (0.0823%)
+2025-08-31T21:06:18.105-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CRM: $256.25 (0.6758%)
+2025-08-31T21:06:18.162-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for PYPL: $70.19 (0.1856%)
+2025-08-31T21:06:18.221-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GOOGL: $212.91 (0.6001%)
+2025-08-31T21:06:18.288-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for MS: $150.48 (0.1998%)
+2025-08-31T21:06:18.338-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AMD: $162.63 (-3.5295%)
+CRITICAL ALERT: PNL_STOP_LOSS for trader charlie
+2025-08-31T21:06:46.386-04:00  INFO 42307 --- [sentinel] [MessageBroker-4] s.c.e.s.service.MarketDataService        : Fetched live price for LTC: $36.5 (0.0823%)
+2025-08-31T21:06:46.390-04:00  INFO 42307 --- [sentinel] [MessageBroker-4] s.c.e.s.service.LiveTradingService       : Executed live trade: alice BUY 382 shares of LTC at $36.5
+2025-08-31T21:06:46.472-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for LTC: $36.5 (0.0823%)
+2025-08-31T21:06:46.550-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AXP: $331.28 (1.312%)
+2025-08-31T21:06:46.610-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for AAPL: $232.14 (-0.1806%)
+2025-08-31T21:06:46.677-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for EOG: $124.82 (0.386%)
+2025-08-31T21:06:46.728-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for UNG: $12.83 (2.0684%)
+2025-08-31T21:06:46.782-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for UNI: $0.0 (0.0%)
+2025-08-31T21:06:46.841-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CRM: $256.25 (0.6758%)
+2025-08-31T21:06:46.893-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for LTC: $36.5 (0.0823%)
+2025-08-31T21:06:46.947-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for TSM: $230.87 (-3.1057%)
+2025-08-31T21:06:47.013-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for MMM: $155.53 (-1.2884%)
+2025-08-31T21:06:47.068-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for CAT: $419.04 (-3.649%)
+2025-08-31T21:06:47.127-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for GS: $745.25 (-0.7947%)
+2025-08-31T21:06:47.186-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for LINK: $9.22 (9.6314%)
+2025-08-31T21:06:47.273-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for JNJ: $177.17 (0.9803%)
+2025-08-31T21:06:47.329-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for META: $738.7 (-1.6522%)
+2025-08-31T21:06:47.384-04:00  INFO 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Fetched live price for ORCL: $226.13 (-5.9046%)
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for USO
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for FDX
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ADBE
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for VTI
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for ABT
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for WMT
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GOOGL
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for PYPL
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for CVX
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for QQQ
+2025-08-31T21:06:47.384-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for XOM
+2025-08-31T21:06:47.385-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for SLV
+2025-08-31T21:06:47.385-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for GOLD
+2025-08-31T21:06:47.385-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for AMZN
+2025-08-31T21:06:47.385-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for NKE
+2025-08-31T21:06:47.385-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for KO
+2025-08-31T21:06:47.385-04:00  WARN 42307 --- [sentinel] [ntainer#1-0-C-1] s.c.e.s.service.MarketDataService        : Rate limit reached, using cached data for SLB
+CRITICAL ALERT: PNL_STOP_LOSS for trader alice
