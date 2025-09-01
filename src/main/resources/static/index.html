@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel Risk Management Dashboard</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .alert {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid;
+        }
+        .alert.critical { background-color: #ffebee; border-left-color: #f44336; }
+        .alert.high { background-color: #fff3e0; border-left-color: #ff9800; }
+        .alert.medium { background-color: #fff8e1; border-left-color: #ffc107; }
+        .alert.low { background-color: #e8f5e8; border-left-color: #4caf50; }
+        .position {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .position:last-child { border-bottom: none; }
+        .positive { color: #4caf50; }
+        .negative { color: #f44336; }
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .status-connected { background-color: #4caf50; }
+        .status-disconnected { background-color: #f44336; }
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 2px;
+        }
+        .btn:hover { background: #5a6fd8; }
+        .btn.acknowledge { background: #4caf50; }
+        .btn.acknowledge:hover { background: #45a049; }
+        
+        .trade-symbol { font-weight: bold; font-size: 1.1em; }
+        .trade-side { 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            font-size: 0.8em; 
+            font-weight: bold; 
+        }
+        .trade-side.buy { background: #d5f4e6; color: #27ae60; }
+        .trade-side.sell { background: #fadbd8; color: #e74c3c; }
+        .trade-quantity { font-size: 0.9em; color: #666; }
+        .trade-price { font-weight: bold; color: #2c3e50; }
+        .trade-trader { font-size: 0.8em; color: #7f8c8d; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function Dashboard() {
+                    const [alerts, setAlerts] = useState([]);
+        const [positions, setPositions] = useState([]);
+        const [marketData, setMarketData] = useState([]);
+        const [recentTrades, setRecentTrades] = useState([]);
+        const [isConnected, setIsConnected] = useState(false);
+        const [stompClient, setStompClient] = useState(null);
+
+            useEffect(() => {
+                // Load initial data
+                loadAlerts();
+                loadPositions();
+                loadMarketData();
+                loadRecentTrades();
+                
+                // Setup WebSocket connection
+                setupWebSocket();
+                
+                // Setup periodic refresh (reduced frequency to respect API limits)
+                const interval = setInterval(() => {
+                    loadAlerts();
+                    loadPositions();
+                    loadMarketData();
+                    loadRecentTrades();
+                }, 60000); // Changed from 10 seconds to 1 minute
+                
+                return () => {
+                    clearInterval(interval);
+                    if (stompClient) {
+                        stompClient.disconnect();
+                    }
+                };
+            }, []);
+
+            const setupWebSocket = () => {
+                const socket = new SockJS('/ws');
+                const client = Stomp.over(socket);
+                
+                client.connect({}, () => {
+                    setIsConnected(true);
+                    client.subscribe('/topic/alerts', (message) => {
+                        const alert = JSON.parse(message.body);
+                        setAlerts(prev => [alert, ...prev.slice(0, 49)]); // Keep last 50 alerts
+                    });
+                });
+                
+                setStompClient(client);
+            };
+
+            const loadAlerts = async () => {
+                try {
+                    const response = await fetch('/api/alerts');
+                    const data = await response.json();
+                    setAlerts(data);
+                } catch (error) {
+                    console.error('Error loading alerts:', error);
+                }
+            };
+
+            const loadPositions = async () => {
+                try {
+                    const response = await fetch('/api/positions');
+                    const data = await response.json();
+                    setPositions(data);
+                } catch (error) {
+                    console.error('Error loading positions:', error);
+                }
+            };
+
+            const loadMarketData = async () => {
+                try {
+                    const response = await fetch('/api/live-trading/market-overview');
+                    const data = await response.json();
+                    setMarketData(data);
+                } catch (error) {
+                    console.error('Error loading market data:', error);
+                }
+            };
+
+            const refreshMarketData = () => {
+                loadMarketData();
+            };
+
+            const loadRecentTrades = async () => {
+                try {
+                    const response = await fetch('/api/trades');
+                    const data = await response.json();
+                    setRecentTrades(data.slice(0, 10)); // Show last 10 trades
+                } catch (error) {
+                    console.error('Error loading recent trades:', error);
+                }
+            };
+
+            const acknowledgeAlert = async (breachId) => {
+                try {
+                    await fetch(`/api/alerts/${breachId}/acknowledge`, {
+                        method: 'PUT'
+                    });
+                    loadAlerts(); // Refresh alerts
+                } catch (error) {
+                    console.error('Error acknowledging alert:', error);
+                }
+            };
+
+            const getSeverityClass = (severity) => {
+                return severity.toLowerCase();
+            };
+
+            const formatCurrency = (amount) => {
+                return new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD'
+                }).format(amount);
+            };
+
+            return (
+                <div className="dashboard">
+                    <div className="header">
+                        <h1>🚨 Sentinel Risk Management Dashboard</h1>
+                        <p>
+                            <span className={`status-indicator status-${isConnected ? 'connected' : 'disconnected'}`}></span>
+                            {isConnected ? 'Connected' : 'Disconnected'} to real-time alerts
+                        </p>
+                    </div>
+
+                    <div className="grid">
+                        <div className="card">
+                            <h3>🚨 Active Alerts ({alerts.filter(a => a.status === 'NEW').length})</h3>
+                            {alerts.filter(a => a.status === 'NEW').slice(0, 5).map(alert => (
+                                <div key={alert.id} className={`alert ${getSeverityClass(alert.severity)}`}>
+                                    <strong>{alert.limitType}</strong> - {alert.trader}
+                                    <br />
+                                    <small>
+                                        {alert.symbol} • {formatCurrency(alert.actualValue)} / {formatCurrency(alert.threshold)}
+                                    </small>
+                                    <br />
+                                    <button 
+                                        className="btn acknowledge" 
+                                        onClick={() => acknowledgeAlert(alert.id)}
+                                    >
+                                        Acknowledge
+                                    </button>
+                                </div>
+                            ))}
+                            {alerts.filter(a => a.status === 'NEW').length === 0 && (
+                                <p>No active alerts</p>
+                            )}
+                        </div>
+
+                        <div className="card">
+                            <h3>📊 Positions Overview</h3>
+                            {positions.slice(0, 10).map(position => (
+                                <div key={position.id} className="position">
+                                    <span>{position.trader} - {position.symbol}</span>
+                                    <span className={position.quantity >= 0 ? 'positive' : 'negative'}>
+                                        {position.quantity >= 0 ? '+' : ''}{position.quantity}
+                                    </span>
+                                </div>
+                            ))}
+                            {positions.length === 0 && (
+                                <p>No positions available</p>
+                            )}
+                        </div>
+
+                        <div className="card">
+                            <h3>📈 Risk Metrics</h3>
+                            <div className="position">
+                                <span>Total Alerts</span>
+                                <span>{alerts.length}</span>
+                            </div>
+                            <div className="position">
+                                <span>Critical Alerts</span>
+                                <span className="negative">
+                                    {alerts.filter(a => a.severity === 'CRITICAL').length}
+                                </span>
+                            </div>
+                            <div className="position">
+                                <span>Active Positions</span>
+                                <span>{positions.length}</span>
+                            </div>
+                        </div>
+
+                        <div className="card">
+                            <h3>🌐 Live Market Data</h3>
+                            <div style={{maxHeight: '200px', overflowY: 'auto'}}>
+                                {marketData.map(quote => (
+                                    <div key={quote.symbol} className="position">
+                                        <span>{quote.symbol}</span>
+                                        <span className={quote.changePercent >= 0 ? 'positive' : 'negative'}>
+                                            ${quote.price.toFixed(2)} {quote.formattedChange}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button className="btn" onClick={refreshMarketData}>
+                                🔄 Refresh
+                            </button>
+                        </div>
+
+                        <div className="card">
+                            <h3>💹 Recent Trades</h3>
+                            <div style={{maxHeight: '200px', overflowY: 'auto'}}>
+                                {recentTrades.map(trade => (
+                                    <div key={trade.id} className="position">
+                                        <div>
+                                            <span className="trade-symbol">{trade.symbol}</span>
+                                            <span className={`trade-side ${trade.side.toLowerCase()}`}>
+                                                {trade.side}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span className="trade-quantity">{trade.quantity} shares</span>
+                                            <span className="trade-price">${trade.price.toFixed(2)}</span>
+                                        </div>
+                                        <div className="trade-trader">{trade.trader}</div>
+                                    </div>
+                                ))}
+                            </div>
+                            <button className="btn" onClick={loadRecentTrades}>
+                                🔄 Refresh Trades
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <h3>📋 Recent Alerts</h3>
+                        <div style={{maxHeight: '300px', overflowY: 'auto'}}>
+                            {alerts.slice(0, 20).map(alert => (
+                                <div key={alert.id} className={`alert ${getSeverityClass(alert.severity)}`}>
+                                    <strong>{alert.limitType}</strong> - {alert.trader} ({alert.symbol})
+                                    <br />
+                                    <small>
+                                        {new Date(alert.occurredAt).toLocaleString()} • 
+                                        Status: {alert.status} • 
+                                        Severity: {alert.severity}
+                                    </small>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<Dashboard />, document.getElementById('root'));
+    </script>
+</body>
+</html>
