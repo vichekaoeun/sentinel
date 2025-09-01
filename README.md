@@ -1,8 +1,8 @@
-# 🚨 Sentinel Risk Management System
+# Sentinel Risk Management System
 
 A comprehensive trade capture and risk management system built with Spring Boot, Kafka, and React.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -17,7 +17,7 @@ A comprehensive trade capture and risk management system built with Spring Boot,
                        └─────────────────┘
 ```
 
-## 🚀 Features
+## Features
 
 - **Trade Capture Service**: REST API to record trades
 - **Risk & Limits Engine**: Real-time exposure and PnL calculation
@@ -26,13 +26,13 @@ A comprehensive trade capture and risk management system built with Spring Boot,
 - **Position Management**: Track trader positions across symbols
 - **Limit Monitoring**: Position, PnL, counterparty, and concentration limits
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - Java 21+
 - Maven 3.6+
 - Kafka (local or Docker)
 
-## 📦 Setup
+## Setup
 
 ### 1. Start Kafka
 
@@ -74,7 +74,7 @@ Open your browser and navigate to:
   - Username: `sa`
   - Password: (leave empty)
 
-## 🧪 Testing
+## Testing
 
 ### Test the System
 
@@ -111,7 +111,7 @@ curl http://localhost:8080/api/alerts
 curl http://localhost:8080/api/positions
 ```
 
-## 📊 API Endpoints
+## API Endpoints
 
 ### Trade Management
 - `POST /trades` - Create a new trade
@@ -124,7 +124,7 @@ curl http://localhost:8080/api/positions
 ### Positions
 - `GET /api/positions` - Get all positions
 
-## 🔧 Configuration
+## Configuration
 
 ### Risk Limits (application.properties)
 ```properties
@@ -151,7 +151,7 @@ risk.concentration.max=0.4       # Max symbol concentration
 - `id`, `breachId`, `limitType`, `trader`, `symbol`
 - `actualValue`, `threshold`, `status`, `severity`
 
-## 🔄 Data Flow
+## Data Flow
 
 1. **Trade Creation**: Trade posted to `/trades` endpoint
 2. **Event Publishing**: `TradeCreated` event published to Kafka
@@ -160,28 +160,28 @@ risk.concentration.max=0.4       # Max symbol concentration
 5. **Alert Generation**: Limit breaches published as `LimitBreached` events
 6. **Real-time Updates**: Dashboard receives alerts via WebSocket
 
-## 🎯 Risk Limit Types
+## Risk Limit Types
 
 - **Position Limit**: Maximum position size per symbol
 - **PnL Stop Loss**: Daily loss threshold
 - **Counterparty Exposure**: Maximum exposure to any counterparty
 - **Concentration Limit**: Maximum percentage in any single symbol
 
-## 🚨 Alert Severity Levels
+## Alert Severity Levels
 
 - **LOW**: Minor limit exceedance
 - **MEDIUM**: Moderate limit exceedance
 - **HIGH**: Significant limit exceedance
 - **CRITICAL**: Severe limit exceedance
 
-## 🛡️ Security Notes
+## Security Notes
 
 - This is a demo system - not production ready
 - H2 database is in-memory and resets on restart
 - No authentication/authorization implemented
 - Kafka topics are not secured
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -204,31 +204,31 @@ Check application logs for detailed error information:
 tail -f logs/spring.log
 ```
 
-## 📄 License
+## License
 
 This project is for educational/demo purposes.
 
-## ✨ Real-Time Features
+## Real-Time Features
 
 Sentinel provides **automatic real-time updates** without requiring manual refresh:
 
-### 🔄 Automatic Updates
+### Automatic Updates
 - **Trades**: New trades appear instantly via WebSocket
 - **Positions**: Position changes update immediately when trades execute
 - **Risk Alerts**: New alerts appear in real-time when limits are breached
 - **Market Data**: Refreshes automatically every 30 seconds
 - **Risk Metrics**: Recalculates automatically when alerts/positions change
 
-### 🎯 WebSocket Integration
+### WebSocket Integration
 - **STOMP over SockJS**: Full-duplex communication with Spring Boot
 - **Auto-reconnection**: Handles connection drops gracefully
 - **Topic subscriptions**: `/topic/trades`, `/topic/positions`, `/topic/alerts`
 - **Real-time status**: Header shows connection status (Connected/Disconnected)
 
-### 🔧 Manual Refresh (Optional)
+### Manual Refresh (Optional)
 Each dashboard section still includes refresh buttons (↻) for manual updates:
 - Force fresh market data (bypasses cache)
 - Refresh specific sections on demand
 - Visual feedback with spinning icons
 
-## 🏃‍♂️ Quick Start
+## Quick Start
